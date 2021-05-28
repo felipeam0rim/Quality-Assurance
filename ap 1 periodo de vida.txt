@@ -1,0 +1,35 @@
+Feature: Converter idade em período de vida
+Backgroud:
+Como usuário
+Eu quero digitar uma idade
+para convertê-la em período de vida
+
+Scenario 1: 
+Dado que o usuário do sistema queira digitar uma idade para ser convertida
+Quando informar a idade 0
+Então deve ser retornado "INVÁLIDO"
+
+Scenario 2: 
+Dado que o usuário do sistema queira digitar uma idade para ser convertida
+Quando informar a idade de 1 a 15
+Então deve ser retornado "CRIANÇA"
+
+Scenario 3: 
+Dado que o usuário do sistema queira digitar uma idade para ser convertida
+Quando informar a idade de 16 a 59
+Então deve ser retornado ADULTO"
+
+Scenario 4: 
+Dado que o usuário do sistema queira digitar uma idade para ser convertida
+Quando informar a idade maior que ou igual a 60
+Então deve ser retornado "IDOSO"
+
+Scenario 5: 
+Dado que o usuário do sistema queira digitar uma idade para ser convertida
+Quando informar a idade menor que 0
+Então deve ser retornado "INVÁLIDO"
+
+COMENTÁRIOS:
+Retornar o valor "INVÁLIDO" para quando for digitado um número inteiro negativo
+
+
