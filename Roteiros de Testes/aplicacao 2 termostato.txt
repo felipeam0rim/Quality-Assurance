@@ -1,0 +1,16 @@
+Feature: Control a thermostat switch to turn the heating on and off
+
+Background:
+As a tester
+I want to turn the heater switch on and off
+To control the thermostat
+
+Scenario 1:
+Given the thermostat switch is off
+When the measured temperature is less than 5 Cº
+Then the switch must turn on
+
+Scenario 2:
+Given the thermostat switch is on
+When the measured temperature is greater than or equal to 23 Cº
+Then the switch must turn off

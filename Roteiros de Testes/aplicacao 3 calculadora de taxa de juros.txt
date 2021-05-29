@@ -1,0 +1,111 @@
+Feature: Calculate annual interest rate
+
+Background:
+As a tester
+I want to input a deposit amount and an age
+To calculate the annual interest rate
+
+Scenario 1:
+Given I input a deposit amount
+When I input an age less than 18
+And the deposit amount is equal or between R$ 100,00 and R$ 999,00
+Then it will not be possible to deposit
+And I must be notified that was not possible to deposit
+
+Scenario 2:
+Given I input a deposit amount
+When I input an age less than 18
+And the deposit amount is equal or between R$ 1000,00 and R$ 4999,00
+Then it will not be possible to deposit
+And I must be notified that was not possible to deposit
+
+Scenario 3:
+Given I input a deposit amount
+When I input an age less than 18
+And the deposit amount is equal or between R$ 5000,00 and R$ 10000,00
+Then it will not be possible to deposit
+And I must be notified that was not possible to deposit
+
+Scenario 4:
+Given I input a deposit amount
+When I input an age less than 18
+And the deposit amount is less than R$ 100,00
+Then it will not be possible to deposit
+And I must be notified that was not possible to deposit
+
+Scenario 5:
+Given I input a deposit amount
+When I input an age less than 18
+And the deposit amount is greater than R$ 10000,00
+Then it will not be possible to deposit
+And I must be notified that was not possible to deposit
+
+Scenario 6:
+Given I input a deposit amount
+When I input an age greater than 18 and less or equal to 60
+And the deposit amount is equal or between R$ 100,00 and R$ 999,00
+Then the deposit must be completed
+And I must be notified of the 1% annual interest rate
+
+Scenario 7:
+Given I input a deposit amount
+When I input an age greater than 18 and less or equal to 60
+And the deposit amount is equal or between R$ 1000,00 and R$ 4999,00
+Then the deposit must be completed
+And I must be notified of the 1.3% annual interest rate
+
+Scenario 8:
+Given I input a deposit amount
+When I input an age greater than 18 and less or equal to 60
+And the deposit amount is equal or between R$ 5000,00 and R$ 10000,00
+Then the deposit must be completed
+And I must be notified of the 1.5% annual interest rate
+
+Scenario 9:
+Given I input a deposit amount
+When I input an age greater than 18 and less or equal to 60
+And the deposit amount is less than R$ 100,00
+Then it will not be possible to deposit
+And I must be notified that the minimum amount for deposits is R$ 100,00
+
+Scenario 10:
+Given I input a deposit amount
+When I input an age greater than 18 and less or equal to 60
+And the deposit amount is greater than R$ 10000,00
+Then it will not be possible to deposit
+And I must be notified that the maximum amount for deposits is R$ 10000,00
+
+Scenario 11:
+Given I input a deposit amount
+When I input an age greater than 60
+And the deposit amount is equal or between R$ 100,00 and R$ 999,00
+Then the deposit must be completed
+And I must be notified of the 2% annual interest rate
+
+Scenario 12:
+Given I input a deposit amount
+When I input an age greater than 60
+And the deposit amount is equal or between R$ 1000,00 and R$ 4999,00
+Then the deposit must be completed
+And I must be notified of the 2% annual interest rate
+
+Scenario 13:
+Given I input a deposit amount
+When I input an age greater than 60
+And the deposit amount is equal or between R$ 5000,00 and R$ 10000,00
+Then the deposit must be completed
+And I must be notified of the 2% annual interest rate
+
+Scenario 14:
+Given I input a deposit amount
+When I input an age greater than 60
+And the deposit amount is less than R$ 100,00
+Then it will not be possible to deposit
+And I must be notified that the minimum amount for deposits is R$ 100,00
+
+Scenario 15:
+Given I input a deposit amount
+When I input an age greater than 60
+And the deposit amount is greater than R$ 10000,00
+Then it will not be possible to deposit
+And I must be notified that the maximum amount for deposits is R$ 10000,00

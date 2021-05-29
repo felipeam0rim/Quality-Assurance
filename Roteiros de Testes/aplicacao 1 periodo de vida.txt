@@ -1,0 +1,29 @@
+Feature: Function that converts age into life stage
+
+Backgroud:
+As a tester
+I want to type an age
+to convert it into life stage
+
+Scenario 1:
+Given I want to input an age to be converted
+When I input age less than or equal to 0
+Then must be returned "INVÁLIDO"
+
+Scenario 2:
+Given I want to input an age to be converted
+When I input age 1 to 15
+Then must be returned "CRIANÇA"
+
+Scenario 3: 
+Given I want to input an age to be converted
+When I input age 16 to 59
+Then must be returned "ADULTO"
+
+Scenario 4: 
+Given I want to input an age to be converted
+When I input age greater than or equal to 60
+Then must be returned "IDOSO"
+
+
+
